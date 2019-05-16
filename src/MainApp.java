@@ -18,6 +18,7 @@ public class MainApp {
 
 
 
+
         Pizza fungi = new Pizza(PizzaType.LARGE, PizzaFlavor.FUNGI);
         Pizza marg = new Pizza(PizzaType.MEDIUM, PizzaFlavor.MARGARITA);
         Pizza haw = new Pizza(PizzaType.SMALL, PizzaFlavor.HAWAIAN);

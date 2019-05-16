@@ -9,6 +9,8 @@ public class WareHouse extends Thread {
     //  private boolean checkStatus = false;
 
 
+
+
     public List<Pizza> getPizzaStocked() {
         return pizzaStocked;
     }
@@ -22,17 +24,12 @@ public class WareHouse extends Thread {
 
 
         if (!pizzaFactory1.isAlive()) {
-
-
+            pizzaFactory1.start();
             startFactory1(newPizza);
 
-
         } else if (!pizzaFactory2.isAlive()) {
-
-
+            pizzaFactory2.start();
             startFactory2(newPizza);
-
-
         }
 
 
@@ -52,7 +49,7 @@ public class WareHouse extends Thread {
 
     public void startFactory2(Pizza newPizza) throws InterruptedException {
 
-        Pizza justMade = pizzaFactory1.makePizza(newPizza);
+        Pizza justMade = pizzaFactory2.makePizza(newPizza);
         pizzaStocked.add(justMade);
         System.out.println("Pizza factory - 2 used to make pizza \n");
 
