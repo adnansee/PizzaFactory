@@ -1,7 +1,7 @@
 public enum PizzaType {
     SMALL(10,6,300),
-    MEDIUM(12,8.5,500),
-    LARGE(16,11,2000);
+    MEDIUM(12,8.5,1000),
+    LARGE(16,11,3000);
 
     private int size;
     private double price;
